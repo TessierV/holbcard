@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolbCard</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <section>
+        <h1>Fullstack</h1>
+    </section>
+
+    <section id="app">
+        <div class="card-container">
+            <div class="card" onclick="flipCard(this)">
+            </div>
+            <span>Normal</span>
+        </div>
+
+        <div class="card-container">
+            <div class="card holo" onclick="flipCard(this)">
+            </div>
+            <span>Holo</span>
+        </div>
+
+        <script>
+            function flipCard(card) {
+                card.classList.toggle('flip');
+            }
+        </script>
+    </section>
+</body>
+
+</html>
