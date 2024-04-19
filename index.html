@@ -5,70 +5,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HolbCard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
-    <section>
-        <h1>Fullstack</h1>
+
+    <section id="home" class="relative">
+        <video autoplay muted loop class="w-full h-400px object-cover">
+            <source src="/assets/video/welcome_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Ajout d'un filtre noir semi-transparent pour améliorer la lisibilité du contenu -->
+        <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 flex-col">
+            <!-- Contenu de votre section ici -->
+            <img class="w-1/2" src="assets/home/logo.png" />
+            <h3 class="text-xl">test</h3>
+        </div>
+
+    </section>
+    <section class="container mx-auto p-10 flex items-center gap-10 mt-10" style="align-items: stretch;">
+        <div class="flex flex-col items-center justify-between" style="height: 350px;">
+            <div class="p-4">
+                <h1 class="uppercase text-4xl font-extrabold">EXTENSION</h1>
+                <h2 class="text-2xl font-extrabold">Toulouse la ville rose</h2>
+            </div>
+            <div class="bg-black p-4">
+                <h2 class="text-2xl font-bold mb-2">Catégorie 1</h2>
+                <p class="text-gray-600">Description de la catégorie 1 Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-between"
+            style="background-image: url('assets/category/holberton_toulouse.png'); background-size: 100% 100%;">
+            <div class="p-4">
+                <h1 class="uppercase text-4xl font-extrabold">EXTENSION</h1>
+                <h2 class="text-2xl font-extrabold">Toulouse la ville rose</h2>
+            </div>
+            <div class="bg-black p-4">
+                <h2 class="text-2xl font-bold mb-2">Catégorie 2</h2>
+                <p class="text-gray-600">Description de la catégorie 2 Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-between">
+            <div class="p-4">
+                <h1 class="uppercase text-4xl font-extrabold">EXTENSION</h1>
+                <h2 class="text-2xl font-extrabold">Toulouse la ville rose</h2>
+            </div>
+            <div class="bg-black p-4">
+                <h2 class="text-2xl font-bold mb-2">Catégorie 3</h2>
+                <p class="text-gray-600">Description de la catégorie 3 Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="app">
-        <div class="card-container">
-            <div class="card" onclick="flipCard(this)">
-            </div>
-            <span>Fondamentals</span>
+    <section class="container mx-auto p-10 flex items-center gap-10 mt-10" style="align-items: stretch;">
+        <div class="w-1/3"><h1>FUSION</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore odio voluptatum assumenda a quibusdam iusto repudiandae, delectus sint debitis distinctio laborum. Voluptatibus iste voluptas possimus provident harum optio cupiditate!</p>
         </div>
-
-        <div class="card-container">
-            <div class="card spe" onclick="flipCard(this)">
+        <div class="flex w-2/3">
+        <div class="flex flex-col items-center justify-between" style="height: 350px;">
+            <div class="p-4">
+                <img src="assets/card/Fullstack.png">
+                <p class="text-gray-600">Description de la catégorie 1 Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
             </div>
-            <span>Specialisation</span>
         </div>
-
-        <div class="card-container">
-            <div class="card holo" onclick="flipCard(this)">
+        <div class="flex flex-col items-center justify-between" style="height: 350px;">
+            <div class="p-4">
+                <img src="assets/card/Fullstack_spe.png">
+                <p class="text-gray-600">Description de la catégorie 1 Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
             </div>
-            <span>Master</span>
         </div>
-
-        <script>
-            function flipCard(card) {
-                card.classList.toggle('flip');
-            }
-        </script>
+        <div class="flex flex-col items-center justify-between">
+            <div class="p-4">
+                <img src="assets/card/Fullstack_holo.png">
+                <p class="text-gray-600">Description de la catégorie 1 Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.</p>
+            </div>
+        </div>
+        </div>
     </section>
-    <!--Machine learning-->
-    <section>
-        <h1>Machine Learning</h1>
+
+    <section class="container flex flex-col mx-auto justify-between">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold">Titre de la section</h2>
+          <p class="text-gray-600">Description de la section Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="flex justify-center items-start">
+          <div class="w-1/4 mr-4 space-y-2">
+            <button class="w-full bg-gray-200 text-gray-800 font-bold py-2 px-4 mb-2 rounded hover:bg-gray-300 transition duration-300" onclick="showImage('Fullstack')">Fullstack</button>
+            <button class="w-full bg-gray-200 text-gray-800 font-bold py-2 px-4 mb-2 rounded hover:bg-gray-300 transition duration-300" onclick="showImage('AR/VR')">AR/VR</button>
+            <button class="w-full bg-gray-200 text-gray-800 font-bold py-2 px-4 mb-2 rounded hover:bg-gray-300 transition duration-300" onclick="showImage('Blockchain')">Blockchain</button>
+            <button class="w-full bg-gray-200 text-gray-800 font-bold py-2 px-4 mb-2 rounded hover:bg-gray-300 transition duration-300" onclick="showImage('Réseau')">Réseau</button>
+            <button class="w-full bg-gray-200 text-gray-800 font-bold py-2 px-4 mb-2 rounded hover:bg-gray-300 transition duration-300" onclick="showImage('Machine Learning')">Machine Learning</button>
+          </div>
+
+          <div id="gallery" class="w-3/4 flex flex-wrap">
+            <div id="Fullstack" class="w-1/3 mb-8 overflow-hidden rounded-lg shadow-md" style="display:none;">
+              <img src="assets/card/Fullstack.png" alt="Image 1" class="w-full h-full object-cover">
+            </div>
+            <div id="ARVR" class="w-1/3 mb-8 overflow-hidden rounded-lg shadow-md" style="display:none;">
+              <img src="assets/card/ARVR.png" alt="Image 2" class="w-full h-full object-cover">
+            </div>
+            <div id="Blockchain" class="w-1/3 mb-8 overflow-hidden rounded-lg shadow-md" style="display:none;">
+              <img src="/assets/card/Blockchain.png" alt="Image 3" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        function showImage(category) {
+          const gallery = document.getElementById('gallery');
+          const images = gallery.children;
+
+          // Masquer toutes les images
+          for (let i = 0; i < images.length; i++) {
+            images[i].style.display = 'none';
+          }
+
+          // Afficher l'image correspondante à la catégorie sélectionnée
+          let selectedImage;
+          switch(category) {
+            case 'Fullstack':
+              selectedImage = document.getElementById('Fullstack');
+              break;
+            case 'AR/VR':
+              selectedImage = document.getElementById('ARVR');
+              break;
+            case 'Blockchain':
+              selectedImage = document.getElementById('Blockchain');
+              break;
+            // Ajouter des cas pour d'autres catégories si nécessaire
+          }
+
+          selectedImage.style.display = 'block';
+        }
+      </script>
+
+    <section class="container mx-auto p-10 flex flex-col items-center gap-10 mt-10" style="align-items: stretch;">
+        <div class="">
+            <h1>SUPPORT</h1>
+            <p>More than Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, perferendis!</p>
+        </div>
+        <div class="flex flex-row">
+            <div class="flex flex-col items-center justify-between" style="height: 350px;">
+                <div class="p-4">
+                    <h1 class="uppercase text-4xl font-extrabold">EXTENSION</h1>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl font-bold mb-2">Catégorie 1</h2>
+                    <p class="text-gray-600">Description de la catégorie 1 Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-between">
+                <div class="p-4">
+                    <h1 class="uppercase text-4xl font-extrabold">EXTENSION</h1>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl font-bold mb-2">Catégorie 2</h2>
+                    <p class="text-gray-600">Description de la catégorie 2 Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-between">
+                <div class="p-4">
+                    <h1 class="uppercase text-4xl font-extrabold">EXTENSION</h1>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl font-bold mb-2">Catégorie 3</h2>
+                    <p class="text-gray-600">Description de la catégorie 3 Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section id="app" class="machineLearning">
-        <div class="card-container">
-            <div class="card" onclick="flipCard(this)">
-            </div>
-            <span>Fondamentals</span>
-        </div>
-
-        <div class="card-container">
-            <div class="card spe" onclick="flipCard(this)">
-            </div>
-            <span>Specialisation</span>
-        </div>
-
-        <div class="card-container">
-            <div class="card holo" onclick="flipCard(this)">
-            </div>
-            <span>Master</span>
-        </div>
-
-        <script>
-            function flipCard(card) {
-                card.classList.toggle('flip');
-            }
-        </script>
+    <section class="flex flex-col">
+        <h2>Rermerciement</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore inventore ex beatae hic debitis. Soluta repudiandae facilis cum voluptates temporibus aut nulla, est, laborum reiciendis veritatis earum incidunt reprehenderit facere!</p>
     </section>
+    <footer>
+        <p>lorem</p>
+    </footer>
 </body>
-
 </html>
