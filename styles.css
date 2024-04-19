@@ -10,9 +10,7 @@ section {
     align-items: center;
 }
 
-.card-container:nth-child(1) {
-    margin-right: 5%;
-}
+
 
 .card {
     width: 322px;
@@ -32,20 +30,41 @@ section {
     /* Ajout d'une transition pour une animation fluide */
 }
 
-.card.flip {
+#app .card.flip {
     transform: rotateY(360deg);
     background-image: url(/assets/back.png);
-    /* Rotation initiale */
+}
+
+.card{
+    background-image: url(/assets/Fullstack_normal.png);
+}
+
+.machineLearning .card{
+    background-image: url(/assets/MachineLearning_normal.png);
+}
+
+.spe {
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: url(assets/Fullstack_spe.png);
+}
+
+.machineLearning .spe{
+    background-image: url(assets/MachineLearning_spe.png);
 }
 
 .holo {
     background-image: url(assets/Fullstack_holo.png);
 }
 
+.machineLearning .holo {
+    background-image: url(assets/MachineLearning_holo.png);
+}
+
+
+
 .card:before,
 .card:after {
-
-
     content: "";
     position: absolute;
     left: 0;
@@ -170,4 +189,6 @@ html {
 h1 {
     display: block;
     margin-top: 30px;
+    text-transform: uppercase;
+    margin: 3% 0;
 }
