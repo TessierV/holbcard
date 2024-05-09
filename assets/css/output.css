@@ -919,7 +919,7 @@ body {
 /* Gallery*/
 
 .gallery-item-container {
-  width: 400px;
+  width: 350px;
   flex-shrink: 0;
   margin: 0 5px;
 }
