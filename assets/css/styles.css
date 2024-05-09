@@ -106,6 +106,12 @@ body {
     @apply shadow-md bg-opacity-75 rounded-lg glass_bg;
 }
 
+.background-class-corner {
+    @apply shadow-md bg-opacity-75 glass_bg;
+    border-radius: 15px 0 0 0;
+}
+
+
 .background-class-high {
     @apply rounded-lg glass_bg;
 }
@@ -211,6 +217,14 @@ body {
     opacity: 1;
 }
 
+.home_container{
+    background-image: url(../category/holberton_toulouse.png);
+    background-size: cover;
+    transition: background-size 2s ease-in-out;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-attachment: fixed;
+}
 
 #presentation a:hover svg {
     fill: var(--white);
@@ -259,6 +273,7 @@ body {
     background-size: 100%;
     background-position: bottom;
     transition: background-size 2s ease-in-out;
+    background-image: url(../category/holberton_toulouse.png);
 }
 
 .gallery-item.active,

@@ -723,6 +723,17 @@ body {
           backdrop-filter: blur(6px);
 }
 
+.background-class-corner {
+  --tw-bg-opacity: 0.75;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background-color: var(--glassColor);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border-radius: 15px 0 0 0;
+}
+
 .background-class-high {
   border-radius: 0.5rem;
   background-color: var(--glassColor);
@@ -904,6 +915,15 @@ body {
   opacity: 1;
 }
 
+.home_container{
+  background-image: url(../category/holberton_toulouse.png);
+  background-size: cover;
+  transition: background-size 2s ease-in-out;
+  background-repeat: no-repeat;
+  height: 600px;
+  background-attachment: fixed;
+}
+
 #presentation a:hover svg {
   fill: var(--white);
 }
@@ -949,6 +969,7 @@ body {
   background-size: 100%;
   background-position: bottom;
   transition: background-size 2s ease-in-out;
+  background-image: url(../category/holberton_toulouse.png);
 }
 
 .gallery-item.active,
