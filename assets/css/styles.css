@@ -68,6 +68,7 @@
 
 body {
     background-color: var(--lightGrey);
+    overflow-x: hidden;
 }
 
 .bg-light_grey {
