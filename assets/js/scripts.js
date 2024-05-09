@@ -45,8 +45,6 @@ function generateCards(cardData) {
         cardElement.classList.add('category-card', 'w-full', 'sm:h-auto', 'md:h-1/2', 'hover:shadow-md', 'md:w-1/3', 'p-4', 'h-full', 'rounded-lg', 'm-auto', 'relative', 'flex', 'flex-col', 'gap-5');
         cardElement.style.backgroundAttachment = 'fixed';
 
-        cardElement.style.backgroundImage = "url('./assets/category/holberton_toulouse.png')";
-
         const titleElement = document.createElement('a');
         titleElement.classList.add('py-3', 'px-5', 'text-xs', 'uppercase', 'tracking-wide', 'mx-4', 'w-min-content', 'self-end', 'rounded-full', 'font-bold', 'bg-black', 'hover:shadow-md', 'text-white', 'leading-5', 'relative', 'z-10', 'justify-end');
         titleElement.textContent = card.title;
