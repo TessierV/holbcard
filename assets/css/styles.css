@@ -1,0 +1,427 @@
+/* Import Tailwind's base styles, components, and utilities */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'AktivGrotesk-Black';
+    src: url('./assets/font/aktiv\ grotesk/') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-Bold';
+    src: url('./assets/font/aktiv-grotesk/AktivGrotesk-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-XBold';
+    src: url('./assets/font/aktiv-grotesk/AktivGrotesk-XBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    /* colors */
+    --white: #f9f9f9;
+    --black: black;
+    --grey: #dbdcdc;
+    --lightGrey: #F1F2F2;
+    --glassColor: rgba(241, 242, 242, 0.75);
+    --primaryColor: #e1003c;
+    --light-primaryColor: #FDEBF0;
+    --secondaryColor: #FE00BC;
+    --gradientbackground: linear-gradient(107deg, rgba(225, 0, 60, 1) 0%, rgba(255, 0, 191, 1) 100%);
+
+
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: var(--grey);
+    transition: background-color 2s ease-in-out;
+
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: var(--gradientbackground);
+}
+
+* {
+    font-family: 'AktivGrotesk-Black', sans-serif;
+    cursor: default;
+}
+
+body {
+    background-color: var(--lightGrey);
+}
+
+.bg-light_grey {
+    background-color: var(--lightGrey);
+}
+
+/* Define your custom styles */
+.holberton_gradient_button {
+    @apply mt-10 self-auto text-center uppercase tracking-wide text-white bg-gradient-to-r from-red-600 to-pink-500 font-medium text-xs py-3 px-6 rounded-full leading-5;
+}
+
+/* Define your custom styles */
+.holberton_section_button {
+    @apply mt-10 self-auto text-center uppercase tracking-wide text-white bg-pink-500 font-medium text-xs py-3 px-6 rounded-full leading-5;
+}
+
+/* Header */
+.nav-link {
+    @apply hover:text-transparent hover:bg-gradient-to-r hover:from-red-600 hover:to-pink-500 hover:bg-clip-text uppercase text-sm;
+}
+
+/* color */
+.light_primary_color {
+    background-color: var(--light-primaryColor);
+}
+
+/* background glass */
+
+.glass_bg{
+    background-color: var(--glassColor);
+    backdrop-filter: blur(6px);
+}
+
+.background-class {
+    @apply shadow-md bg-opacity-75 rounded-lg glass_bg;
+}
+
+.background-class-high {
+    @apply rounded-lg glass_bg;
+}
+
+/* button */
+.background_gradient_color{
+    background: var(--gradientbackground);
+
+}
+
+.background_gradient{
+    @apply rounded-lg text-white background_gradient_color;
+}
+
+.background_gradient_icon{
+    @apply font-bold px-5 pt-2 rounded-full text-white background_gradient_color;
+}
+
+.background_gradient_text_support{
+    @apply font-bold px-5 pt-2 rounded-full;
+    background-color: var(--light-primaryColor);
+}
+
+.background_gradient_icon_support{
+    @apply font-bold p-3 rounded-full;
+    background-color: var(--light-primaryColor);
+}
+
+
+.background_gradient_button{
+    @apply background_gradient_color rounded-full text-white font-bold px-10 py-4 hover:shadow-md focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800;
+}
+
+.button_step{
+    @apply bg-red-light uppercase tracking-wide text-white py-3 md:px-6 leading-5 rounded-full;
+}
+
+/* circle button */
+.circle_gradient{
+    @apply background_gradient_color font-bold rounded-full;
+}
+
+.background_gradient_button_circle{
+    @apply circle_gradient p-4;
+}
+
+.background_gradient_icon_circle_medium{
+    @apply circle_gradient p-3;
+}
+
+.background_gradient_icon_circle{
+    @apply circle_gradient p-2;
+}
+
+.text-extensionlinear {
+    color: var(--white);
+}
+
+.bg-light {
+    background-color: var(--white);
+}
+
+
+.testbg {
+    background: var(--gradientbackground);
+    opacity: 0.9;
+    isolation: isolate;
+    mix-blend-mode: hard-light;
+}
+
+.text_gradient{
+    background: var(--gradientbackground);
+    background-clip: text;
+    color: transparent;
+}
+
+.text-textLight {
+    color: var(--white);
+}
+
+.other_container,
+.support_container {
+    background-size: 100%;
+    height: 400px;
+    transition: background-size 2s ease-in-out;
+    cursor: pointer;
+}
+
+.other_container:hover,
+.support_container:hover {
+    background-size: 110%;
+    display: flex;
+}
+
+.content_container {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.other_container:hover .content_container,
+.support_container:hover .content_container {
+    opacity: 1;
+}
+
+
+#presentation a:hover svg {
+    fill: var(--white);
+}
+
+.bg-red-light {
+    background-color: var(--light-primaryColor);
+    color: var(--primaryColor);
+}
+
+.bg-white_color {
+    background-color: var(--white);
+}
+
+/* Gallery*/
+.gallery-item-container {
+    width: 400px;
+    flex-shrink: 0;
+    margin: 0 5px;
+}
+
+.gallery-item {
+    width: 100%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0.8;
+    height: 300px;
+    background-size: 100%;
+    transition: background-size 2s ease-in-out;
+
+}
+
+
+@media (max-width: 640px) {
+    .gallery-item {
+        height: 200px;
+
+    }
+
+    .gallery-item-container {
+        width: 300px;
+    }
+}
+
+.category-card {
+    background-size: 100%;
+    background-position: bottom;
+    transition: background-size 2s ease-in-out;
+}
+
+.gallery-item.active,
+.gallery-item:hover,
+.category-card:hover {
+    opacity: 1;
+    background-size: 110%;
+}
+
+.gallery-item.active {
+    border: 5px double var(--lightGrey);
+}
+
+#gallery {
+    padding-bottom: 5px;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.control-button {
+    border: 1px solid var(--black);
+    padding: 8px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.transition-shadow {
+    transition: box-shadow 3s ease-in-out;
+}
+
+.control-button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+.card_effect:before,
+.card_effect:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(115deg, transparent 0%, rgba(92, 92, 92, 0.774) 30%, rgba(119, 119, 119, 0.743) 70%, transparent 100%);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    mix-blend-mode: color-dodge;
+    opacity: 0;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
+    animation: holoGradient 15s ease infinite;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
+.holo:after,
+.holo:before {
+    background-image: linear-gradient(115deg, transparent 0%, rgb(0, 231, 255) 30%, rgb(255, 0, 231) 70%, transparent 100%);
+}
+
+.card_effect:after,
+.card_effect:before {
+    background-image: linear-gradient(115deg, transparent 0%, rgb(63, 66, 66) 30%, rgb(255, 0, 231) 70%, transparent 100%);
+}
+
+.holo:after {
+    background-image: url("/assets/card/sparkles.gif");
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: color-dodge;
+    opacity: 0;
+    animation: holoSparkle 20s ease infinite;
+}
+
+.card_effect.active:before {
+    opacity: 0.5;
+    animation: none;
+    transition: none;
+    background-image: linear-gradient(115deg, transparent 0%, transparent 25%, rgb(0, 231, 255) 45%, rgb(255, 0, 231) 55%, transparent 70%, transparent 100%);
+}
+
+
+@keyframes holoSparkle {
+    0% {
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    95% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes holoGradient {
+    3% {
+        opacity: 0;
+    }
+
+    5% {
+        background-position: 0% 0%;
+    }
+
+    7% {
+        opacity: 0.5;
+    }
+
+    9% {
+        background-position: 100% 100%;
+    }
+
+    11% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        background-position: 100% 100%;
+    }
+
+    55% {
+        opacity: 0.3;
+    }
+
+    70% {
+        opacity: 0;
+        background-position: 0% 0%;
+    }
+}
+
+.card_effect {
+    width: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+
+.card_effect.flip img {
+    transform: rotateY(180deg);
+}
+
+.card_effect.flip img {
+    content: url(/assets/card/back.png);
+}

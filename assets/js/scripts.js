@@ -5,6 +5,20 @@ function toggleMenu() {
     mobileMenu.classList.toggle('hidden');
 }
 
+function toggleMenu() {
+    var mobileMenu = document.getElementById("mobileMenu");
+}
+window.addEventListener('scroll', function () {
+    var header = document.getElementById('mainHeader');
+    if (window.scrollY > 50) {
+        header.classList.remove('hidden');
+        header.classList.add('top_interval');
+    } else {
+        header.classList.add('hidden');
+        header.classList.remove('top_interval');
+    }
+});
+
 /* Category */
 const cardData = [
     {
@@ -30,10 +44,10 @@ function generateCards(cardData) {
 
     cardData.forEach((card, index) => {
         const cardElement = document.createElement('div');
-        cardElement.classList.add('category-card', 'w-full', 'sm:h-auto', 'md:h-1/2', 'md:w-1/3', 'p-4', 'h-full', 'rounded-lg', 'm-auto', 'relative', 'flex', 'flex-col', 'gap-5');
+        cardElement.classList.add('category-card', 'w-full', 'sm:h-auto', 'md:h-1/2', 'hover:shadow-md', 'md:w-1/3', 'p-4', 'h-full', 'rounded-lg', 'm-auto', 'relative', 'flex', 'flex-col', 'gap-5');
         cardElement.style.backgroundAttachment = 'fixed';
+
         cardElement.style.backgroundImage = "url('../assets/category/holberton_toulouse.png')";
-        cardElement.style.backgroundSize = 'cover';
 
         const titleElement = document.createElement('a');
         titleElement.classList.add('py-3', 'px-5', 'text-xs', 'uppercase', 'tracking-wide', 'mx-4', 'w-min-content', 'self-end', 'rounded-full', 'font-bold', 'bg-black', 'hover:shadow-md', 'text-white', 'leading-5', 'relative', 'z-10', 'justify-end');
@@ -81,6 +95,7 @@ function generateCards(cardData) {
     });
 }
 generateCards(cardData);
+
 
 /* Cursus */
 const descriptionParagraph = document.querySelector('#descriptionParagraph');
@@ -146,8 +161,6 @@ function scrollGallery(direction) {
 
 
 /* Fade */
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
