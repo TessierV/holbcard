@@ -6,31 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HolbCard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/output.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-
-
-
 </head>
 
 <body>
-    <header id="mainHeader" class="top_interval hidden w-full p-1 shadow-md"
-        style="background-color: #F1F2F2c3; border-radius: 15px; backdrop-filter: blur(10px); position: fixed; z-index: 5;">
+    <header id="mainHeader" class="top_interval hidden w-full p-1 background-class"
+        style="position: fixed; z-index: 5; ">
         <div class="container mx-auto p-4 flex justify-between items-center">
             <div class="text-lg font-bold">
                 HolbCard
             </div>
             <nav>
                 <ul class="hidden md:flex space-x-4">
-                    <li><a href="#" class="block hover:text-red-500 uppercase text-sm ">Accueil</a></li>
-                <li><a href="#presentation" class="block hover:text-red-500 uppercase text-sm">Presentation</a></li>
-                <li><a href="#cursus" class="block hover:text-red-500 uppercase text-sm">Cursus</a></li>
-                <li><a href="#specialisations" class="block hover:text-red-500 uppercase text-sm">Les Spécialisations</a></li>
-                <li><a href="#other" class="block hover:text-red-500 uppercase text-sm">Divers</a></li>
-                <li><a href="#thanks" class="block hover:text-red-500 uppercase text-sm">Rermerciement</a></li>
+                    <li><a href="#" class="block nav-link cursor-pointer">Accueil</a></li>
+                    <li><a href="#presentation" class="block nav-link cursor-pointer">Presentation</a></li>
+                    <li><a href="#cursus" class="block nav-link cursor-pointer">Cursus</a></li>
+                    <li><a href="#specialisations" class="block nav-link cursor-pointer">Les Spécialisations</a></li>
+                    <li><a href="#other" class="block nav-link cursor-pointer">Divers</a></li>
+                    <li><a href="#thanks" class="block nav-link cursor-pointer">Rermerciement</a></li>
                 </ul>
                 <div class="md:hidden">
                     <button id="menuToggle" class="text-white focus:outline-none" onclick="toggleMenu()">
@@ -45,35 +41,15 @@
 
         <div id="mobileMenu" class="md:hidden transition-all duration-300 ease-in-out">
             <ul class="text-center space-y-2 p-4">
-                <li><a href="#" class="block hover:text-red-500 uppercase text-sm">Accueil</a></li>
-                <li><a href="#presentation" class="block hover:text-red-500 uppercase text-sm">Presentation</a></li>
-                <li><a href="#cursus" class="block hover:text-red-500 uppercase text-sm">Cursus</a></li>
-                <li><a href="#specialisations" class="block hover:text-red-500 uppercase text-sm">Les Spécialisations</a></li>
-                <li><a href="#other" class="block hover:text-red-500 uppercase text-sm">Divers</a></li>
-                <li><a href="#thanks" class="block hover:text-red-500 uppercase text-sm">Rermerciement</a></li>
+                <li><a href="#" class="block nav-link cursor-pointer">Accueil</a></li>
+                <li><a href="#presentation" class="block nav-link cursor-pointer">Presentation</a></li>
+                <li><a href="#cursus" class="block nav-link cursor-pointer">Cursus</a></li>
+                <li><a href="#specialisations" class="block nav-link cursor-pointer">Les Spécialisations</a></li>
+                <li><a href="#other" class="block nav-link cursor-pointer">Divers</a></li>
+                <li><a href="#thanks" class="block nav-link cursor-pointer">Rermerciement</a></li>
             </ul>
         </div>
     </header>
-
-
-    <script>
-        function toggleMenu() {
-            var mobileMenu = document.getElementById("mobileMenu");
-        }
-        window.addEventListener('scroll', function () {
-            var header = document.getElementById('mainHeader');
-            if (window.scrollY > 50) {
-                header.classList.remove('hidden');
-                header.classList.add('top_interval');
-            } else {
-                header.classList.add('hidden');
-                header.classList.remove('top_interval');
-            }
-        });
-
-    </script>
-
-
 
     <section id="home" class="relative p-10 rounded-lg">
         <video autoplay muted loop class="w-full h-[400px] object-cover rounded-lg">
@@ -84,28 +60,26 @@
             class=" absolute inset-0 flex justify-center items-center  m-10 bg-black bg-opacity-50 rounded-lg flex-col px-6 py-10">
             <img src="assets/home/holbertonactual_digital_school.png" alt="Holberton Digital School Logo"
                 class="top_interval w-1/2 sm:w-1/3 md:w-1/3 lg:w-1/3" />
-            <a href="#cursus" class="bottom_interval text-l mt-10 md:text-xl font-bold px-10 py-4 rounded-full hover:shadow-md focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
-                style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0,60,1) 0%, rgba(255,0,191,1) 100%);">Voir les cartes</a>
+            <a href="#cursus" class="bottom_interval text-l mt-10 md:text-xl background_gradient_button cursor-pointer">Voir les
+                cartes</a>
         </div>
     </section>
 
     <section id="presentation" class="bottom_interval container  mx-auto my-5 p-10" style="margin-top: 5%;">
         <h1 class="tracking-wider font-bold text-2xl md:text-7xl leading-tight">
             Plongez dans le monde de
-            <span class="inline-block px-4 text-transparent bg-gradient-to-r from-red-600 to-pink-500 bg-clip-text">
-                Holberton
-            </span>
+            <span class="inline-block px-4 text_gradient">Holberton</span>
             : des
             <a href="#cursus"
-                class="inline-flex items-center justify-center p-1 text-sm font-bold text-gray-900 rounded-full group bg-gradient-to-r from-red-600 to-pink-500 group-hover:from-red-600 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                class="cursor-pointer inline-flex items-center justify-center p-1 text-sm font-bold text-gray-900 rounded-full group bg-gradient-to-r from-red-600 to-pink-500 group-hover:from-red-600 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 ">
                 <span
-                    class="flex items-center px-5 bg-light_grey group-hover:bg-gray-900 rounded-full md:text-m group-hover:bg-opacity-0 ">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-10 text-pink-500 mt-2 mr-2" viewBox="0 0 24 24"
+                    class="flex items-center px-5 bg-light_grey group-hover:bg-gray-900 rounded-full md:text-m group-hover:bg-opacity-0 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-10 text-pink-500 mt-2 mr-2 cursor-pointer" viewBox="0 0 24 24"
                         fill="#292627">
                         <path
                             d="M12 4.5c-1.74-1.74-4.6-1.74-6.34 0-1.73 1.74-1.73 4.6 0 6.34l6.34 6.34 6.34-6.34c1.73-1.74 1.73-4.6 0-6.34-1.74-1.74-4.6-1.74-6.34 0z" />
                     </svg>
-                    <h2 class="text-xl md:text-4xl">Cartes</h2>
+                    <h2 class="text-xl md:text-4xl cursor-pointer">Cartes</h2>
                 </span>
             </a>
             captivantes pour chaque étape de votre aventure !
@@ -115,7 +89,7 @@
     <section id="project" class="container mx-auto my-10 p-10" style="margin-top: 5%;">
         <div class="flex flex-col md:flex-row justify-end">
             <div class="left_transition tracking-wide leading-6 md:w-1/3">
-                <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
+                <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
                 <h3 class="md:text-7xl  text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Le Projet
                 </h3>
             </div>
@@ -134,71 +108,73 @@
 
     <section class="container mx-auto p-10 bg-light rounded-lg" style="margin-top: 5%;">
         <div class="p-10 text-center rounded-lg">
-            <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold">l'Exercice</h2>
+            <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold">l'Exercice</h2>
             <h2 class="md:text-7xl  text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Les étapes</h2>
             <p class="md:w-1/2 py-10 mx-auto text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Labore inventore ex beatae hic debitis. Soluta repudiandae facilis cum voluptates temporibus aut nulla,
                 est, laborum reiciendis veritatis earum incidunt reprehenderit facere!</p>
-
             <div class="md:w-2/3 grid mx-auto grid-cols-2 md:grid-cols-4 gap-2" style="align-items: flex-end;">
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full transform -rotate-6">Recherche</a>
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full transform rotate-2">Design</a>
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full transform rotate-3">Responsive</a>
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full">Analyse</a>
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full transform -rotate-2">Charte
-                    graphique</a>
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full transform rotate-3">UI</a>
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full transform -rotate-6">Développement</a>
-                <a
-                    class="top_interval bg-red-light uppercase tracking-wide text-white text-xs py-3 md:px-6 leading-5 rounded-full  transform rotate-2">Optimisation</a>
+                <a class="top_interval button_step text-xs transform -rotate-6">Recherche</a>
+                <a class="top_interval button_step text-xs transform rotate-2">Design</a>
+                <a class="top_interval button_step text-xs transform rotate-3">Responsive</a>
+                <a class="top_interval button_step text-xs">Analyse</a>
+                <a class="top_interval button_step text-xs transform -rotate-2">Charte graphique</a>
+                <a class="top_interval button_step text-xs transform rotate-3">UI</a>
+                <a class="top_interval button_step text-xs transform -rotate-6">Développement</a>
+                <a class="top_interval button_step text-xs  transform rotate-2">Optimisation</a>
             </div>
-
-
-
         </div>
     </section>
-    <section id="cursus" class="container mx-auto my-10 flex flex-col md:flex-row items-center md:items-start" style="margin-top: 5%;">
-        <div class="container p-10 lg:w-1/2 mx-auto flex flex-col sticky top-0" style="background-color: #F1F2F2c3; backdrop-filter: blur(10px); align-items: stretch; justify-content: space-between; z-index: 3;">
+    <section id="cursus" class="container mx-auto my-10 flex flex-col md:flex-row items-center md:items-start"
+        style="margin-top: 5%;">
+        <div class="container p-10 lg:w-1/2 mx-auto flex flex-col sticky top-0 background-class-high"
+            style="align-items: stretch; justify-content: space-between; z-index: 3;">
             <div class=" flex flex-col md:mb-8 pt-10">
                 <div class="flex flex-row">
-                    <a class="text-l md:text-xl font-bold px-10 py-4 rounded-full" style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0,60,1) 0%, rgba(255,0,191,1) 100%);">Description Card</a>
-                    <a class="text-xl font-bold p-4 rounded-full" style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
-                        <svg id="fi_7995722" height="30" fill="#F1F2F2" viewBox="0 0 64 64" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m23.17 15.97c.21-2.04 1.92-3.58 3.98-3.58.14 0 .28 0 .42.02l11.43 1.2v-7.61c0-1.1-.9-2-2-2h-27c-1.1 0-2 .9-2 2v39c0 1.1.9 2 2 2h9.91z"></path>
-                            <rect height="43" rx="2" transform="matrix(.995 .105 -.105 .995 4.1 -3.82)" width="31" x="23.04" y="15.7"></rect>
+                    <a class="text-l md:text-xl background_gradient_button cursor-default">Description Card</a>
+                    <a class="text-xl background_gradient_button_circle">
+                        <svg id="fi_7995722" height="30" fill="#F1F2F2" viewBox="0 0 64 64" width="30"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m23.17 15.97c.21-2.04 1.92-3.58 3.98-3.58.14 0 .28 0 .42.02l11.43 1.2v-7.61c0-1.1-.9-2-2-2h-27c-1.1 0-2 .9-2 2v39c0 1.1.9 2 2 2h9.91z">
+                            </path>
+                            <rect height="43" rx="2" transform="matrix(.995 .105 -.105 .995 4.1 -3.82)" width="31"
+                                x="23.04" y="15.7"></rect>
                         </svg>
                     </a>
                 </div>
             </div>
             <div style="text-align: left;">
-                <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
-                <h3 class="md:text-7xl  text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Le Cursus</h3>
-                <p id="descriptionParagraph" style="width: 90%;"><b>Découvrez le Parcours d'Excellence en Développement Logiciel</b><br>
-                    Plongez dans une aventure pédagogique passionnante où chaque étape vous rapproche un peu plus de l'expertise en développement logiciel. De la piscine initiale à la prestigieuse certification RNCP, notre programme est conçu pour vous guider à travers chaque phase de votre transformation en développeur compétent et qualifié.</p>
+                <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
+                <h3 class="md:text-7xl  text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Le Cursus
+                </h3>
+                <p id="descriptionParagraph" style="width: 90%;"><b>Découvrez le Parcours d'Excellence en Développement
+                        Logiciel</b><br>
+                    Plongez dans une aventure pédagogique passionnante où chaque étape vous rapproche un peu plus de
+                    l'expertise en développement logiciel. De la piscine initiale à la prestigieuse certification RNCP,
+                    notre programme est conçu pour vous guider à travers chaque phase de votre transformation en
+                    développeur compétent et qualifié.</p>
             </div>
             <div class="flex flex-row">
                 <p class="pt-4" id="imageDescription" class="text-gray-600"></p>
             </div>
         </div>
         <div class="lg:w-1/2 flex overflow-x-auto gap-4 flex-col" style="padding-bottom: 15px;">
-            <div id="piscineImage" class="card_effect shadow-md right_transition flex-shrink-0 flex flex-col items-center justify-between my-5 ">
+            <div id="piscineImage"
+                class="card_effect transition_shadow hover:shadow-md right_transition flex-shrink-0 flex flex-col items-center justify-between my-5 ">
                 <img src="assets/card/Piscine.png" alt="Piscine" style="height: 100%;" />
             </div>
 
-            <div id="fondamentauxImage" class="card_effect shadow-md left_transition flex-shrink-0 flex flex-col items-center justify-between my-5">
+            <div id="fondamentauxImage"
+                class="card_effect transition_shadow hover:shadow-md left_transition flex-shrink-0 flex flex-col items-center justify-between my-5">
                 <img src="assets/card/Fondamenteaux.png" alt="Fondamentaux" style="height: 100%;" />
             </div>
-            <div id="specialisationImage" class="card_effect shadow-md right_transition flex-shrink-0 flex flex-col items-center justify-between my-5">
+            <div id="specialisationImage"
+                class="card_effect transition_shadow hover:shadow-md right_transition flex-shrink-0 flex flex-col items-center justify-between my-5">
                 <img src="assets/card/Spe_Fullstack.png" alt="Spe_Fullstack" style="height: 100%;" />
             </div>
-            <div id="rncpImage" class="card_effect shadow-md left_transition holo flex-shrink-0 flex flex-col items-center justify-between my-5">
+            <div id="rncpImage"
+                class="card_effect transition_shadow  transition_shadow hover:shadow-md left_transition holo flex-shrink-0 flex flex-col items-center justify-between my-5">
                 <img src="assets/card/RNCP_Holo.png" alt="RNCP_Holo" style="height: 100%;" />
             </div>
         </div>
@@ -219,19 +195,28 @@
                                 data-src="./assets/card/Spe_ARVR.png" onclick="changePhoto(0)">
                                 <div class=" absolute top-2 right-2 flex-col flex-start">
                                     <div class="flex flex-row">
-
-                                        <a class="font-bold p-2  rounded-full"
-                                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0" y="0" viewBox="0 0 48 48" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M25.764 12h-3.528a2.984 2.984 0 0 0-2.683 1.658l-.171.342h9.236l-.171-.342A2.983 2.983 0 0 0 25.764 12zM4.947 32.995A8.94 8.94 0 0 1 4 29v-8c0-.659.098-1.294.269-1.899A2.997 2.997 0 0 0 2 22v8a3 3 0 0 0 2.947 2.995zM43.731 19.101c.171.605.269 1.24.269 1.899v8a8.94 8.94 0 0 1-.947 3.995A3 3 0 0 0 46 30v-8a2.997 2.997 0 0 0-2.269-2.899zM37 16H11c-3.486 0-5 3.028-5 5v8c0 1.467.449 2.832 1.229 3.954C7.599 33.486 9.437 36 13 36h5.667c2.04 0 3.534-1.4 3.534-1.4 1.743-1.226 3.344-.192 3.599 0 0 0 1.433 1.4 3.534 1.4H35c3.718 0 7-2.999 7-7v-8c0-2.292-1.823-5-5-5zm-24.001 6.002h-2c-1.349 0-1.306-2 0-2h2c1.375.03 1.304 2 0 2z" fill="#ffffff" opacity="1" data-original="#000000"></path></g></svg>
+                                        <a class="background_gradient_icon_circle">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0"
+                                                y="0" viewBox="0 0 48 48" style="enable-background:new 0 0 512 512"
+                                                xml:space="preserve" class="">
+                                                <g>
+                                                    <path
+                                                        d="M25.764 12h-3.528a2.984 2.984 0 0 0-2.683 1.658l-.171.342h9.236l-.171-.342A2.983 2.983 0 0 0 25.764 12zM4.947 32.995A8.94 8.94 0 0 1 4 29v-8c0-.659.098-1.294.269-1.899A2.997 2.997 0 0 0 2 22v8a3 3 0 0 0 2.947 2.995zM43.731 19.101c.171.605.269 1.24.269 1.899v8a8.94 8.94 0 0 1-.947 3.995A3 3 0 0 0 46 30v-8a2.997 2.997 0 0 0-2.269-2.899zM37 16H11c-3.486 0-5 3.028-5 5v8c0 1.467.449 2.832 1.229 3.954C7.599 33.486 9.437 36 13 36h5.667c2.04 0 3.534-1.4 3.534-1.4 1.743-1.226 3.344-.192 3.599 0 0 0 1.433 1.4 3.534 1.4H35c3.718 0 7-2.999 7-7v-8c0-2.292-1.823-5-5-5zm-24.001 6.002h-2c-1.349 0-1.306-2 0-2h2c1.375.03 1.304 2 0 2z"
+                                                        fill="#ffffff" opacity="1" data-original="#000000"></path>
+                                                </g>
+                                            </svg>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="p-4 mb-2 rounded-lg mx-auto"
-                                    style="background-color: #f9f9f9a1; backdrop-filter: blur(5px); width: 90%;">
-                                    <h4 class="uppercase font-bold">AR/VR</h4>
+                                <div class="p-4 mb-2 background-class mx-auto" style="width: 90%;">
+                                    <h2
+                                        class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">
+                                        AR/VR</h2>
                                     <div class="flex justify-between">
-                                        <p>durée</p>
-                                        <p>1350h</p>
+                                        <h4 class="uppercase font-bold">Durée</h4>
+
+                                        <p class="text-gray-600">1350h</p>
                                     </div>
                                 </div>
                             </div>
@@ -243,18 +228,44 @@
                                 <div class=" absolute top-2 right-2 flex-col flex-start">
                                     <div class="flex flex-row">
 
-                                        <a class="font-bold p-2  rounded-full"
-                                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
-                                            <svg id="Capa_1" fill="#FFFFFF" width="25" height="25" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m271 251.66v114.275l98.965-57.137v-114.275z"/><path d="m157.035 168.542 98.965 57.138 98.965-57.138-98.965-57.138z"/><path d="m241 251.66-98.965-57.137v114.275l98.965 57.137z"/><path d="m451.726 85.954c-10.786 0-20.667 3.927-28.308 10.416l-166.917-96.37-167.519 96.717c-7.694-6.695-17.732-10.763-28.708-10.763-24.152 0-43.8 19.648-43.8 43.8 0 19.247 12.485 35.623 29.778 41.484v192.922l165.822 95.737c-.518 2.69-.799 5.463-.799 8.302 0 24.151 19.648 43.799 43.8 43.799 24.151 0 43.799-19.648 43.799-43.799 0-2.316-.184-4.59-.532-6.81l168.407-97.23v-193.26c16.774-6.144 28.777-22.269 28.777-41.145 0-24.151-19.649-43.8-43.8-43.8zm-15.023 260.86-152.963 88.313c-7.689-6.673-17.71-10.726-28.666-10.726-10.412 0-19.982 3.658-27.507 9.748l-151.268-87.335v-176.31c16.245-6.411 27.774-22.254 27.774-40.75 0-2.297-.18-4.552-.522-6.754l152.95-88.306 152.041 87.781c-.398 2.369-.616 4.798-.616 7.279 0 18.876 12.003 35.001 28.777 41.145z"/></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg>
+                                        <a class="background_gradient_icon_circle">
+                                            <svg id="Capa_1" fill="#FFFFFF" width="25" height="25"
+                                                enable-background="new 0 0 512 512" viewBox="0 0 512 512"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path d="m271 251.66v114.275l98.965-57.137v-114.275z" />
+                                                    <path
+                                                        d="m157.035 168.542 98.965 57.138 98.965-57.138-98.965-57.138z" />
+                                                    <path d="m241 251.66-98.965-57.137v114.275l98.965 57.137z" />
+                                                    <path
+                                                        d="m451.726 85.954c-10.786 0-20.667 3.927-28.308 10.416l-166.917-96.37-167.519 96.717c-7.694-6.695-17.732-10.763-28.708-10.763-24.152 0-43.8 19.648-43.8 43.8 0 19.247 12.485 35.623 29.778 41.484v192.922l165.822 95.737c-.518 2.69-.799 5.463-.799 8.302 0 24.151 19.648 43.799 43.8 43.799 24.151 0 43.799-19.648 43.799-43.799 0-2.316-.184-4.59-.532-6.81l168.407-97.23v-193.26c16.774-6.144 28.777-22.269 28.777-41.145 0-24.151-19.649-43.8-43.8-43.8zm-15.023 260.86-152.963 88.313c-7.689-6.673-17.71-10.726-28.666-10.726-10.412 0-19.982 3.658-27.507 9.748l-151.268-87.335v-176.31c16.245-6.411 27.774-22.254 27.774-40.75 0-2.297-.18-4.552-.522-6.754l152.95-88.306 152.041 87.781c-.398 2.369-.616 4.798-.616 7.279 0 18.876 12.003 35.001 28.777 41.145z" />
+                                                </g>
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                                <g />
+                                            </svg>
                                         </a>
-                                        </div>
+                                    </div>
                                 </div>
-                                <div class="p-4 mb-2 rounded-lg mx-auto"
-                                    style="background-color: #f9f9f9a1; backdrop-filter: blur(5px); width: 90%;">
-                                    <h4 class="uppercase font-bold">Blockchain</h4>
+                                <div class="p-4 mb-2 background-class mx-auto" style="width: 90%;">
+                                    <h2
+                                        class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">
+                                        Blockchain</h2>
                                     <div class="flex justify-between">
-                                        <p>durée</p>
-                                        <p>1350h</p>
+                                        <h4 class="uppercase font-bold">Durée</h4>
+                                        <p class="text-gray-600">1350h</p>
                                     </div>
                                 </div>
                             </div>
@@ -265,18 +276,24 @@
                                 data-src="./assets/card/Spe_Cybersecurite.png" onclick="changePhoto(2)">
                                 <div class=" absolute top-2 right-2 flex-col flex-start">
                                     <div class="flex flex-row">
-                                        <a class="font-bold p-3  rounded-full"
-                                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
-                                            <svg id="fi_3064155" fill="#FFFFFF" enable-background="new 0 0 24 24" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m18.75 9h-.75v-3c0-3.309-2.691-6-6-6s-6 2.691-6 6v3h-.75c-1.24 0-2.25 1.009-2.25 2.25v10.5c0 1.241 1.01 2.25 2.25 2.25h13.5c1.24 0 2.25-1.009 2.25-2.25v-10.5c0-1.241-1.01-2.25-2.25-2.25zm-10.75-3c0-2.206 1.794-4 4-4s4 1.794 4 4v3h-8zm5 10.722v2.278c0 .552-.447 1-1 1s-1-.448-1-1v-2.278c-.595-.347-1-.985-1-1.722 0-1.103.897-2 2-2s2 .897 2 2c0 .737-.405 1.375-1 1.722z"></path></svg>
+                                        <a class="background_gradient_icon_circle">
+                                            <svg id="fi_3064155" fill="#FFFFFF" enable-background="new 0 0 24 24"
+                                                height="20" viewBox="0 0 24 24" width="20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m18.75 9h-.75v-3c0-3.309-2.691-6-6-6s-6 2.691-6 6v3h-.75c-1.24 0-2.25 1.009-2.25 2.25v10.5c0 1.241 1.01 2.25 2.25 2.25h13.5c1.24 0 2.25-1.009 2.25-2.25v-10.5c0-1.241-1.01-2.25-2.25-2.25zm-10.75-3c0-2.206 1.794-4 4-4s4 1.794 4 4v3h-8zm5 10.722v2.278c0 .552-.447 1-1 1s-1-.448-1-1v-2.278c-.595-.347-1-.985-1-1.722 0-1.103.897-2 2-2s2 .897 2 2c0 .737-.405 1.375-1 1.722z">
+                                                </path>
+                                            </svg>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="p-4 mb-2 rounded-lg mx-auto"
-                                    style="background-color: #f9f9f9a1; backdrop-filter: blur(5px); width: 90%;">
-                                    <h4 class="uppercase font-bold">Cybersécurité</h4>
+                                <div class="p-4 mb-2 background-class mx-auto" style="width: 90%;">
+                                    <h2
+                                        class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">
+                                        Cybersécurité</h2>
                                     <div class="flex justify-between">
-                                        <p>durée</p>
-                                        <p>1350h</p>
+                                        <h4 class="uppercase font-bold">Durée</h4>
+                                        <p class="text-gray-600">1350h</p>
                                     </div>
                                 </div>
                             </div>
@@ -287,18 +304,22 @@
                                 data-src="./assets/card/Spe_Fullstack.png" onclick="changePhoto(3)">
                                 <div class=" absolute top-2 right-2 flex-col flex-start">
                                     <div class="flex flex-row">
-                                        <a class="font-bold p-3  rounded-full"
-                                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
-                                            <svg fill="none" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg" id="fi_8860853"><path clip-rule="evenodd" d="m13.3951 1.32445c-.8787-.4326-1.9115-.432601-2.7902 0l-8.75201 4.30902c-1.137183.55988-1.13719 2.17317 0 2.73306l8.75201 4.30897c.8787.4327 1.9115.4327 2.7902.0001l8.752-4.30907c1.1372-.55988 1.1372-2.17317 0-2.73306zm-11.492 9.28425c.13926-.0686.30246-.0686.44171 0l8.26009 4.0668c.8787.4326 1.9115.4326 2.7902 0l8.2601-4.0668c.1392-.0686.3024-.0686.4417 0l.0502.0247c1.1372.5599 1.1372 2.1732 0 2.7331l-8.752 4.309c-.8787.4326-1.9115.4326-2.7902 0l-8.75201-4.309c-1.13719-.5599-1.137183-2.1732 0-2.7331zm.44171 5.0001c-.13925-.0686-.30245-.0686-.44171 0l-.05021.0247c-1.137183.5599-1.13719 2.1732 0 2.7331l8.75201 4.309c.8787.4326 1.9115.4326 2.7902 0l8.752-4.309c1.1372-.5599 1.1372-2.1732 0-2.7331l-.0502-.0247c-.1393-.0686-.3025-.0686-.4417 0l-8.2601 4.0668c-.8787.4326-1.9115.4326-2.7902 0z" fill="#FFFFFF" fill-rule="evenodd"></path></svg>
+                                        <a class="background_gradient_icon_circle">
+
+                                            <svg fill="none" height="20" viewBox="0 0 24 24" width="20"
+                                                xmlns="http://www.w3.org/2000/svg" id="fi_8860853">
+                                                <path clip-rule="evenodd"
+                                                    d="m13.3951 1.32445c-.8787-.4326-1.9115-.432601-2.7902 0l-8.75201 4.30902c-1.137183.55988-1.13719 2.17317 0 2.73306l8.75201 4.30897c.8787.4327 1.9115.4327 2.7902.0001l8.752-4.30907c1.1372-.55988 1.1372-2.17317 0-2.73306zm-11.492 9.28425c.13926-.0686.30246-.0686.44171 0l8.26009 4.0668c.8787.4326 1.9115.4326 2.7902 0l8.2601-4.0668c.1392-.0686.3024-.0686.4417 0l.0502.0247c1.1372.5599 1.1372 2.1732 0 2.7331l-8.752 4.309c-.8787.4326-1.9115.4326-2.7902 0l-8.75201-4.309c-1.13719-.5599-1.137183-2.1732 0-2.7331zm.44171 5.0001c-.13925-.0686-.30245-.0686-.44171 0l-.05021.0247c-1.137183.5599-1.13719 2.1732 0 2.7331l8.75201 4.309c.8787.4326 1.9115.4326 2.7902 0l8.752-4.309c1.1372-.5599 1.1372-2.1732 0-2.7331l-.0502-.0247c-.1393-.0686-.3025-.0686-.4417 0l-8.2601 4.0668c-.8787.4326-1.9115.4326-2.7902 0z"
+                                                    fill="#FFFFFF" fill-rule="evenodd"></path>
+                                            </svg>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="p-4 mb-2 rounded-lg mx-auto"
-                                    style="background-color: #f9f9f9a1; backdrop-filter: blur(5px); width: 90%;">
-                                    <h4 class="uppercase font-bold">Fullstack</h4>
+                                <div class="p-4 mb-2 background-class mx-auto" style="width: 90%;">
+                                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">Fullstack</h2>
                                     <div class="flex justify-between">
-                                        <p>durée</p>
-                                        <p>1350h</p>
+                                        <h4 class="uppercase font-bold">Durée</h4>
+                                        <p class="text-gray-600">1350h</p>
                                     </div>
                                 </div>
                             </div>
@@ -309,40 +330,67 @@
                                 data-src="./assets/card/Spe_MachineLearning.png" onclick="changePhoto(4)">
                                 <div class=" absolute top-2 right-2 flex-col flex-start">
                                     <div class="flex flex-row">
-
-                                        <a class="font-bold p-2  rounded-full"
-                                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
-                                            <svg clip-rule="evenodd" fill-rule="evenodd" fill="#FFFFFF" height="25" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" width="25" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path d="m18.75 8c0-1.519-1.231-2.75-2.75-2.75h-8c-1.519 0-2.75 1.231-2.75 2.75v8c0 1.519 1.231 2.75 2.75 2.75h8c1.519 0 2.75-1.231 2.75-2.75zm-4.75 2v4c0 .414.336.75.75.75s.75-.336.75-.75v-4c0-.414-.336-.75-.75-.75s-.75.336-.75.75zm-1 4v-3c0-.966-.783-1.75-1.75-1.75h-1c-.967 0-1.75.784-1.75 1.75v3c0 .414.336.75.75.75s.75-.336.75-.75v-.75h1.5v.75c0 .414.336.75.75.75s.75-.336.75-.75zm-3-2.25h1.5v-.75c0-.138-.112-.25-.25-.25h-1c-.138 0-.25.112-.25.25z"/><path d="m18 12.75h4c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-4c-.414 0-.75.336-.75.75s.336.75.75.75z"/><path d="m12.75 6v-4c0-.414-.336-.75-.75-.75s-.75.336-.75.75v4c0 .414.336.75.75.75s.75-.336.75-.75z"/><path d="m11.25 18v4c0 .414.336.75.75.75s.75-.336.75-.75v-4c0-.414-.336-.75-.75-.75s-.75.336-.75.75z"/><path d="m6 11.25h-4c-.414 0-.75.336-.75.75s.336.75.75.75h4c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"/><path d="m18 9.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75z"/><path d="m9.75 6v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75v2.5c0 .414.336.75.75.75s.75-.336.75-.75z"/><path d="m8.25 18v2.5c0 .414.336.75.75.75s.75-.336.75-.75v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75z"/><path d="m6 8.25h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"/><path d="m18 15.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75z"/><path d="m15.75 6v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75v2.5c0 .414.336.75.75.75s.75-.336.75-.75z"/><path d="m14.25 18v2.5c0 .414.336.75.75.75s.75-.336.75-.75v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75z"/><path d="m6 14.25h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"/></g></svg>
+                                        <a class="background_gradient_icon_circle">
+                                            <svg clip-rule="evenodd" fill-rule="evenodd" fill="#FFFFFF" height="25"
+                                                stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                                                width="25" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Icon">
+                                                    <path
+                                                        d="m18.75 8c0-1.519-1.231-2.75-2.75-2.75h-8c-1.519 0-2.75 1.231-2.75 2.75v8c0 1.519 1.231 2.75 2.75 2.75h8c1.519 0 2.75-1.231 2.75-2.75zm-4.75 2v4c0 .414.336.75.75.75s.75-.336.75-.75v-4c0-.414-.336-.75-.75-.75s-.75.336-.75.75zm-1 4v-3c0-.966-.783-1.75-1.75-1.75h-1c-.967 0-1.75.784-1.75 1.75v3c0 .414.336.75.75.75s.75-.336.75-.75v-.75h1.5v.75c0 .414.336.75.75.75s.75-.336.75-.75zm-3-2.25h1.5v-.75c0-.138-.112-.25-.25-.25h-1c-.138 0-.25.112-.25.25z" />
+                                                    <path
+                                                        d="m18 12.75h4c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-4c-.414 0-.75.336-.75.75s.336.75.75.75z" />
+                                                    <path
+                                                        d="m12.75 6v-4c0-.414-.336-.75-.75-.75s-.75.336-.75.75v4c0 .414.336.75.75.75s.75-.336.75-.75z" />
+                                                    <path
+                                                        d="m11.25 18v4c0 .414.336.75.75.75s.75-.336.75-.75v-4c0-.414-.336-.75-.75-.75s-.75.336-.75.75z" />
+                                                    <path
+                                                        d="m6 11.25h-4c-.414 0-.75.336-.75.75s.336.75.75.75h4c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z" />
+                                                    <path
+                                                        d="m18 9.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75z" />
+                                                    <path
+                                                        d="m9.75 6v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75v2.5c0 .414.336.75.75.75s.75-.336.75-.75z" />
+                                                    <path
+                                                        d="m8.25 18v2.5c0 .414.336.75.75.75s.75-.336.75-.75v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75z" />
+                                                    <path
+                                                        d="m6 8.25h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z" />
+                                                    <path
+                                                        d="m18 15.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75z" />
+                                                    <path
+                                                        d="m15.75 6v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75v2.5c0 .414.336.75.75.75s.75-.336.75-.75z" />
+                                                    <path
+                                                        d="m14.25 18v2.5c0 .414.336.75.75.75s.75-.336.75-.75v-2.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75z" />
+                                                    <path
+                                                        d="m6 14.25h-2.5c-.414 0-.75.336-.75.75s.336.75.75.75h2.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z" />
+                                                </g>
+                                            </svg>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="p-4 mb-2 rounded-lg mx-auto"
-                                    style="background-color: #f9f9f9a1; backdrop-filter: blur(5px); width: 90%;">
-                                    <h4 class="uppercase font-bold">Machine Learning</h4>
+                                <div class="p-4 mb-2 background-class mx-auto" style="width: 90%;">
+                                    <h2
+                                        class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">
+                                        Machine Learning</h2>
                                     <div class="flex justify-between">
-                                        <p>durée</p>
-                                        <p>1350h</p>
+                                        <h4 class="uppercase font-bold">Durée</h4>
+                                        <p class="text-gray-600">1350h</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="button-container bottom_interval">
-                        <button class="control-button" onclick="scrollGallery(-1)"><i
-                                class="bi bi-arrow-left"></i></button>
-                        <button class="control-button" onclick="scrollGallery(1)"><i
-                                class="bi bi-arrow-right"></i></button>
-
+                        <button class="control-button cursor-pointer" onclick="scrollGallery(-1)"><i
+                                class="bi bi-arrow-left cursor-pointer"></i></button>
+                        <button class="control-button cursor-pointer" onclick="scrollGallery(1)"><i
+                                class="bi bi-arrow-right cursor-pointer"></i></button>
                     </div>
-
                 </div>
                 <div class="left_transition order-1 md:order-2">
-                    <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold text-right">
+                    <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold text-right">
                         Présentation</h2>
                     <h3
                         class="md:text-7xl  text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold text-right">
-                        Les
-                        Specialisations</h3>
+                        Les Specialisations</h3>
                 </div>
             </div>
         </div>
@@ -352,60 +400,34 @@
     <section id="other" class="container mx-auto relative flex flex-col items-center p-10 " style="margin-top: 5%;">
         <div class="flex flex-col md:flex-row" style="justify-content: space-between; margin-top: 5%; ">
             <div class="left_transition tracking-wide leading-6 md:w-1/2 py-10">
-                <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
+                <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
                 <h3 class="md:text-7xl  text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Divers</h3>
             </div>
 
-            <p class="md:w-1/2 text-gray-600">Dans notre section 'Divers', restez à l'affût de nos prochaines innovations avec des cartes de soutien et de renforcement à venir. Préparez-vous à découvrir de nouveaux outils et ressources pour booster votre parcours académique et professionel.</p>
+            <p class="md:w-1/2 text-gray-600">Dans notre section 'Divers', restez à l'affût de nos prochaines
+                innovations avec des cartes de soutien et de renforcement à venir. Préparez-vous à découvrir de nouveaux
+                outils et ressources pour booster votre parcours académique et professionel.</p>
         </div>
         <div class="flex flex-col md:flex-row mt-10 md:py-10 gap-5 items-stretch ">
-            <div class="md:w-1/4 bottom_interval  flex flex-col justify-between other_container"
-                style="border-radius: 15px; background-color: #FDEBF0;">
+            <div
+                class="md:w-1/4 bottom_interval  flex flex-col justify-between other_container rounded-lg light_primary_color">
                 <div class="p-12">
                     <h1 class="uppercase text-4xl font-extrabold">Booster</h1>
                 </div>
                 <div class="md:h-2/5  m-3 py-4 px-10 rounded-lg ">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">Présentation</h2>
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">Présentation
+                    </h2>
                     <p class="text-gray-600">Augmente ta productivité et ton efficacité grâce à nos cartes Boost,
                         conçues pour t'offrir un coup de pouce supplémentaire !</p>
                 </div>
             </div>
 
-            <style>
-                .other_container,
-                .support_container {
-                    background-size: 100%;
-                    height: 400px;
-                    transition: background-size 2s ease-in-out;
-                    cursor: pointer;
-                }
-
-                .other_container:hover,
-                .support_container:hover {
-                    background-size: 110%;
-                    display: flex;
-                }
-
-                .content_container {
-                    opacity: 0;
-                    transition: opacity 0.5s ease-in-out;
-
-                }
-
-                .other_container:hover .content_container,
-                .support_container:hover .content_container {
-                    opacity: 1;
-                }
-            </style>
-
             <div class="md:w-1/4 other_container bottom_interval flex flex-col items-center justify-end rounded-lg bg-bottom order-3"
                 style="background-image: url(assets/divers/coffee.png);" alt="coffee-machine">
                 <div class=" absolute top-2 right-2 flex-col flex-start">
                     <div class="flex flex-row">
-                        <a class="text-s font-bold px-5 pt-2 rounded-full"
-                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0,60,1) 0%, rgba(255,0,191,1) 100%);">Booster</a>
-                        <a class="font-bold p-3  rounded-full"
-                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
+                        <a class="background_gradient_icon text-s ">Booster</a>
+                        <a class="background_gradient_icon_circle_medium">
                             <svg fill="#ffffff" id="Layer_1" enable-background="new 0 0 512 512" height="20"
                                 viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -418,9 +440,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="content_container md:h-2/5  m-3 py-4 px-10 rounded-lg flex  flex-col justify-evenly"
-                    style="background-color: #f9f9f997; backdrop-filter: blur(10px);">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">Café</h2>
+                <div class="content_container md:h-2/5  m-3 py-4 px-10 background-class flex  flex-col justify-evenly">
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">Café</h2>
                     <p class="text-gray-600">Booste ta productivité pour coder toute la nuit</p>
                 </div>
             </div>
@@ -429,10 +450,8 @@
                 style="background-image: url(assets/divers/breaktime.png);" alt="breaktime">
                 <div class=" absolute top-2 right-2 flex-col flex-start">
                     <div class="flex flex-row">
-                        <a class="text-s font-bold px-5 pt-2 rounded-full"
-                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0,60,1) 0%, rgba(255,0,191,1) 100%);">Booster</a>
-                        <a class="font-bold p-3  rounded-full"
-                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
+                        <a class="background_gradient_icon text-s ">Booster</a>
+                        <a class="background_gradient_icon_circle_medium">
                             <svg fill="#ffffff" id="Layer_1" enable-background="new 0 0 512 512" height="20"
                                 viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -445,9 +464,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="content_container md:h-2/5 m-3 py-4 px-10 rounded-lg flex  flex-col justify-evenly"
-                    style="background-color: #f9f9f997; backdrop-filter: blur(10px);">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">Temps de pause</h2>
+                <div class="content_container md:h-2/5 m-3 py-4 px-10 background-class flex  flex-col justify-evenly">
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">Temps de pause
+                    </h2>
                     <p class="text-gray-600">Recharge tes énergies pour revenir encore plus concentré sur tes tâches de
                         programmation</p>
                 </div>
@@ -456,10 +475,8 @@
                 style="background-image: url(assets/divers/peers.png);" alt="peers">
                 <div class=" absolute top-2 right-2 flex-col flex-start">
                     <div class="flex flex-row">
-                        <a class="text-s font-bold px-5 pt-2 rounded-full"
-                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0,60,1) 0%, rgba(255,0,191,1) 100%);">Booster</a>
-                        <a class="font-bold p-3  rounded-full"
-                            style="color: #ffffff;  background: linear-gradient(107deg, rgba(225,0, 191,1) 0%, rgba(255,0,60,1) 100%);">
+                        <a class="background_gradient_icon text-s ">Booster</a>
+                        <a class="background_gradient_icon_circle_medium">
                             <svg fill="#ffffff" id="Layer_1" enable-background="new 0 0 512 512" height="20"
                                 viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -473,9 +490,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="content_container md:h-2/5 m-3 py-4 px-10 rounded-lg flex  flex-col justify-evenly"
-                    style="background-color: #F9F9F9c3; backdrop-filter: blur(10px);">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">Peers</h2>
+                <div class="content_container md:h-2/5 m-3 py-4 px-10 background-class flex  flex-col justify-evenly">
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">Peers</h2>
                     <p class="text-gray-600">Obtiens un coup de main de tes camarades et surmonte ensemble les défis de
                         programmation les plus complexes.</p>
                 </div>
@@ -486,9 +502,8 @@
                 style="background-image: url(assets/divers/director.png);">
                 <div class=" absolute top-2 right-2 flex-col flex-start">
                     <div class="flex flex-row">
-                        <a class="text-s font-bold px-5 pt-2 rounded-full"
-                            style="background-color: #FDEBF0;">Support</a>
-                        <a class="font-bold p-3  rounded-full" style="background-color: #FDEBF0;">
+                        <a class="text-s background_gradient_text_support">Support</a>
+                        <a class="background_gradient_icon_support">
                             <svg id="Capa_1" enable-background="new 0 0 407.846 407.846" height="20"
                                 viewBox="0 0 407.846 407.846" width="20" xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -510,9 +525,8 @@
                     </div>
                 </div>
 
-                <div class="content_container md:h-2/5 m-3 py-4 px-10 rounded-lg flex  flex-col justify-evenly"
-                    style="background-color: #F9F9F9c3; backdrop-filter: blur(10px);">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">Directeur</h2>
+                <div class="content_container md:h-2/5 m-3 py-4 px-10 background-class flex  flex-col justify-evenly">
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">Directeur</h2>
                     <p class="text-gray-600">Bénéficie de la sagesse et des conseils du directeur pour guider tes choix
                         académiques et professionnels.</p>
                 </div>
@@ -521,9 +535,8 @@
                 style="background-image: url(assets/divers/swe.png);">
                 <div class=" absolute top-2 right-2 flex-col flex-start">
                     <div class="flex flex-row">
-                        <a class="text-s font-bold px-5 pt-2 rounded-full"
-                            style="background-color: #FDEBF0;">Support</a>
-                        <a class="font-bold p-3  rounded-full" style="background-color: #FDEBF0;">
+                        <a class="text-s background_gradient_text_support">Support</a>
+                        <a class="background_gradient_icon_support">
                             <svg id="Capa_1" enable-background="new 0 0 407.846 407.846" height="20"
                                 viewBox="0 0 407.846 407.846" width="20" xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -545,9 +558,8 @@
                     </div>
                 </div>
 
-                <div class="content_container md:h-2/5 m-3 py-4 px-10 rounded-lg flex  flex-col justify-evenly"
-                    style="background-color: #F9F9F9c3; backdrop-filter: blur(10px);">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">SWE</h2>
+                <div class="content_container md:h-2/5 m-3 py-4 px-10 flex flex-col justify-evenly background-class">
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">SWE</h2>
                     <p class="text-gray-600">Reçois le soutien technique et les astuces pratiques des ingénieurs
                         logiciels pour perfectionner tes compétences</p>
                 </div>
@@ -556,9 +568,8 @@
                 style="background-image: url(assets/divers/ssm.png);">
                 <div class=" absolute top-2 right-2 flex-col flex-start">
                     <div class="flex flex-row">
-                        <a class="text-s font-bold px-5 pt-2 rounded-full"
-                            style="background-color: #FDEBF0;">Support</a>
-                        <a class="font-bold p-3  rounded-full" style="background-color: #FDEBF0;">
+                        <a class="text-s background_gradient_text_support">Support</a>
+                        <a class="background_gradient_icon_support">
                             <svg id="Capa_1" enable-background="new 0 0 407.846 407.846" height="20"
                                 viewBox="0 0 407.846 407.846" width="20" xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -579,20 +590,20 @@
                         </a>
                     </div>
                 </div>
-                <div class="content_container md:h-2/5 m-3 py-4 px-10 rounded-lg flex  flex-col justify-evenly"
-                    style="background-color: #F9F9F9c3; backdrop-filter: blur(10px);">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">SSM</h2>
+                <div class="content_container md:h-2/5 m-3 py-4 px-10 background-class flex  flex-col justify-evenly">
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">SSM</h2>
                     <p class="text-gray-600">Fais appel au Student School Manager pour résoudre les problèmes
                         administratifs.</p>
                 </div>
             </div>
-            <div class="md:w-1/4 support_container bottom_interval flex flex-col justify-between order-1 mt-4 md:mt-0 md:order-4"
-                style="border-radius: 15px; background: linear-gradient(130deg, rgba(225,0,60,1) 0%, rgba(255,0,191,1) 100%); color: white;">
+            <div
+                class="md:w-1/4 support_container bottom_interval flex flex-col justify-between order-1 mt-4 md:mt-0 md:order-4 background_gradient p-4">
                 <div class="p-12">
                     <h1 class="uppercase text-4xl font-extrabold">Support</h1>
                 </div>
                 <div class="md:h-2/5 m-3 py-4 px-10 rounded-lg flex  flex-col justify-evenly">
-                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-bold">Présentation</h2>
+                    <h2 class="tracking-wide uppercase font-medium leading-6 bold text-xl font-extrabold">Présentation
+                    </h2>
                     <p class="text-white">Obtiens le soutien nécessaire pour surmonter les défis académiques avec nos
                         cartes Support !</p>
                 </div>
@@ -602,8 +613,8 @@
 
 
     <section id="thanks" class="bottom_interval container mx-auto p-10" style="margin-top: 5%;">
-        <div class="p-10 text-center rounded-lg" style="background-color: #FDEBF0;">
-            <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold">Note</h2>
+        <div class="p-10 text-center rounded-lg light_primary_color">
+            <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold">Note</h2>
             <h3 class="md:text-7xl  text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Rermerciement
 
             </h3>
@@ -614,14 +625,15 @@
                 appui tout au long du projet. Votre collaboration a été inestimable et a grandement contribué à la
                 réussite de ce projet. Merci à vous tous !
             </p>
-            <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold">Vanessa</h2>
+            <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold">Vanessa</h2>
         </div>
     </section>
     <section class="container mx-auto items-center p-10"
         style="align-items: stretch; margin-top: 5%; margin-bottom: 5%;">
         <div class="left_transition">
-            <h2 class="text-l text-sectionGrey tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
-            <h3 class="md:text-7xl mb-10 text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Question</h3>
+            <h2 class="text-l text-gray-400 tracking-wide uppercase font-medium leading-6 bold">Présentation</h2>
+            <h3 class="md:text-7xl mb-10 text-2xl  py-4 tracking-wide font-medium leading-6 font-extrabold">Question
+            </h3>
         </div>
         <div class="py-4" x-data="{ openTab: null }">
             <div>
@@ -629,10 +641,13 @@
                     class="top_interval cursor-pointer bg-white_color hover:shadow-md rounded-lg px-10 py-6 my-2 flex justify-between items-center transition-all duration-300">
                     <div>
                         <h2
-                            class="inline-block my-2 text-2xl font-bold text-transparent bg-gradient-to-r from-red-600 to-pink-500 bg-clip-text">
+                            class="inline-block my-2 text-2xl font-bold text_gradient">
                             Le projet va-t-il continuer à se développer ?
                         </h2>
-                        <p x-show="openTab === 1" style="height: auto; overflow: hidden;"> Pour l'instant, le développement continu n'est pas prévu, mais il est envisageable d'ajouter de nouvelles cartes, notamment pour les membres de l'équipe pédagogique ou pour les différents campus.</p>
+                        <p x-show="openTab === 1" style="height: auto; overflow: hidden;"> Pour l'instant, le
+                            développement continu n'est pas prévu, mais il est envisageable d'ajouter de nouvelles
+                            cartes, notamment pour les membres de l'équipe pédagogique ou pour les différents campus.
+                        </p>
                     </div>
                     <i x-bind:class="{ 'rotate-45': openTab === 1 }"
                         class="bi bi-arrow-right text-3xl transform p-4 transition-all duration-300"></i>
@@ -640,10 +655,13 @@
                 <div id="question" @click="openTab !== 2 ? openTab = 2 : openTab = null"
                     class="top_interval cursor-pointer	bg-white_color hover:shadow-md rounded-lg border px-10 py-6 my-2 flex justify-between items-center transition-all duration-300">
                     <div>
-                        <h2 class="inline-block my-2 text-2xl font-bold text-transparent bg-gradient-to-r from-red-600 to-pink-500 bg-clip-text">
+                        <h2
+                            class="inline-block my-2 text-2xl font-bold text_gradient">
                             Est-ce que le projet est facilement personnalisable ?
                         </h2>
-                        <p x-show="openTab === 2" style="height: auto; overflow: hidden;">Oui, le projet est facilement personnalisable grâce aux modèles de cartes déjà conçus sur Figma. Vous pouvez les adapter selon vos besoins spécifiques.</p>
+                        <p x-show="openTab === 2" style="height: auto; overflow: hidden;">Oui, le projet est facilement
+                            personnalisable grâce aux modèles de cartes déjà conçus sur Figma. Vous pouvez les adapter
+                            selon vos besoins spécifiques.</p>
                     </div>
                     <i x-bind:class="{ 'rotate-45': openTab === 2 }"
                         class="bi bi-arrow-right text-3xl transform p-4 transition-all duration-300"></i>
@@ -651,10 +669,14 @@
                 <div id="question" @click="openTab !== 3 ? openTab = 3 : openTab = null"
                     class="top_interval cursor-pointer bg-white_color hover:shadow-md rounded-lg border px-10 py-6 my-2 flex justify-between items-center transition-all duration-300">
                     <div>
-                        <h2 class="inline-block my-2 text-2xl font-bold text-transparent bg-gradient-to-r from-red-600 to-pink-500 bg-clip-text">
+                        <h2
+                            class="inline-block my-2 text-2xl font-bold text_gradient">
                             Est-ce qu'il y aura des mises à jour régulières ou de nouvelles fonctionnalités à l'avenir ?
                         </h2>
-                        <p x-show="openTab === 3" style="height: auto; overflow: hidden;"> Bien que cela ne soit pas prévu actuellement, des mises à jour régulières ou de nouvelles fonctionnalités pourraient être envisagées dans le futur pour améliorer l'expérience utilisateur et répondre aux besoins changeants.</p>
+                        <p x-show="openTab === 3" style="height: auto; overflow: hidden;"> Bien que cela ne soit pas
+                            prévu actuellement, des mises à jour régulières ou de nouvelles fonctionnalités pourraient
+                            être envisagées dans le futur pour améliorer l'expérience utilisateur et répondre aux
+                            besoins changeants.</p>
                     </div>
                     <i x-bind:class="{ 'rotate-45': openTab === 3 }"
                         class="bi bi-arrow-right text-3xl transform p-4 transition-all duration-300"></i>
@@ -662,9 +684,12 @@
             </div>
     </section>
     <footer class="bg-gray-200 p-10">
-        <p class="text-center">Made with love by <a class="font-bold text-transparent bg-gradient-to-r from-red-600 to-pink-500 bg-clip-text" href="https://www.linkedin.com/in/vanessa-tessier/">Vanessa</a></p>
+        <p class="text-center">Made with love by <a
+                class="font-bold text_gradient cursor-pointer"
+                href="https://www.linkedin.com/in/vanessa-tessier/">Vanessa</a></p>
     </footer>
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>

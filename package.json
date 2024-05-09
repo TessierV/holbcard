@@ -1,0 +1,12 @@
+{
+  "name": "holbcard",
+  "version": "1.0.0",
+  "description": "Holberton card training figma",
+  "main": "./assets/js/postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
