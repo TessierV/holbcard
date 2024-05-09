@@ -5,9 +5,6 @@ function toggleMenu() {
     mobileMenu.classList.toggle('hidden');
 }
 
-function toggleMenu() {
-    var mobileMenu = document.getElementById("mobileMenu");
-}
 window.addEventListener('scroll', function () {
     var header = document.getElementById('mainHeader');
     if (window.scrollY > 50) {
@@ -18,6 +15,7 @@ window.addEventListener('scroll', function () {
         header.classList.remove('top_interval');
     }
 });
+
 
 /* Category */
 const cardData = [
